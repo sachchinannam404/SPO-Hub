@@ -49,6 +49,22 @@
           "manifest": "./src/webparts/timeline/TimelineWebPart.manifest.json"
         }
       ]
+    },
+    "charts-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/charts/ChartsWebPart.js",
+          "manifest": "./src/webparts/charts/ChartsWebPart.manifest.json"
+        }
+      ]
+    },
+    "admin-forms-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/adminForms/AdminFormsWebPart.js",
+          "manifest": "./src/webparts/adminForms/AdminFormsWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},

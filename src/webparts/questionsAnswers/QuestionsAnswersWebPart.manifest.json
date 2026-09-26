@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "b6c7d8e9-f0a1-2345-bcde-678901234f01",
+  "alias": "QuestionsAnswersWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46db-9951-df6df2897b84",
+      "group": { "default": "SPO-Hub" },
+      "title": { "default": "List-Based Q&A" },
+      "description": {
+        "default": "Community and process Q&A driven by a SharePoint list with search, status and category filters."
+      },
+      "officeFabricIconFontName": "Questionnaire",
+      "properties": {
+        "dataSource": {
+          "itemLimit": 50,
+          "fieldMapping": {
+            "questionField": "Question",
+            "answerField": "Answer",
+            "categoryField": "Category",
+            "statusField": "Status",
+            "isActiveField": "IsActive"
+          }
+        },
+        "display": {},
+        "behavior": { "enableSearch": true, "enableFilter": true },
+        "personalization": { "enableAudienceTargeting": false }
+      }
+    }
+  ]
+}

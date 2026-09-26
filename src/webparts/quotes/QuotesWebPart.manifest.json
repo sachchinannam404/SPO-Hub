@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "f4a5b6c7-d8e9-0123-fabc-456789012def",
+  "alias": "QuotesWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46db-9951-df6df2897b84",
+      "group": { "default": "SPO-Hub" },
+      "title": { "default": "List-Based Quotes" },
+      "description": {
+        "default": "Leadership messages, employee testimonials and adoption messaging from a SharePoint list."
+      },
+      "officeFabricIconFontName": "Quote",
+      "properties": {
+        "dataSource": {
+          "itemLimit": 20,
+          "orderBy": "DisplayOrder",
+          "fieldMapping": {
+            "quoteField": "Quote",
+            "authorField": "Author",
+            "roleField": "Role",
+            "imageField": "Image",
+            "isActiveField": "IsActive"
+          }
+        },
+        "display": {},
+        "behavior": { "autoRotate": true, "autoRotateIntervalSeconds": 8 },
+        "personalization": { "enableAudienceTargeting": false },
+        "mode": "carousel"
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "tiles-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/tiles/TilesWebPart.js",
+          "manifest": "./src/webparts/tiles/TilesWebPart.manifest.json"
+        }
+      ]
+    },
+    "accordion-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/accordion/AccordionWebPart.js",
+          "manifest": "./src/webparts/accordion/AccordionWebPart.manifest.json"
+        }
+      ]
+    },
+    "quotes-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/quotes/QuotesWebPart.js",
+          "manifest": "./src/webparts/quotes/QuotesWebPart.manifest.json"
+        }
+      ]
+    },
+    "employee-spotlight-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/employeeSpotlight/EmployeeSpotlightWebPart.js",
+          "manifest": "./src/webparts/employeeSpotlight/EmployeeSpotlightWebPart.manifest.json"
+        }
+      ]
+    },
+    "questions-answers-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/questionsAnswers/QuestionsAnswersWebPart.js",
+          "manifest": "./src/webparts/questionsAnswers/QuestionsAnswersWebPart.manifest.json"
+        }
+      ]
+    },
+    "timeline-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/timeline/TimelineWebPart.js",
+          "manifest": "./src/webparts/timeline/TimelineWebPart.manifest.json"
+        }
+      ]
+    },
+    "charts-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/charts/ChartsWebPart.js",
+          "manifest": "./src/webparts/charts/ChartsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "TilesWebPartStrings": "lib/webparts/tiles/loc/{locale}.js",
+    "AccordionWebPartStrings": "lib/webparts/accordion/loc/{locale}.js",
+    "QuotesWebPartStrings": "lib/webparts/quotes/loc/{locale}.js",
+    "EmployeeSpotlightWebPartStrings": "lib/webparts/employeeSpotlight/loc/{locale}.js",
+    "QuestionsAnswersWebPartStrings": "lib/webparts/questionsAnswers/loc/{locale}.js",
+    "TimelineWebPartStrings": "lib/webparts/timeline/loc/{locale}.js",
+    "ChartsWebPartStrings": "lib/webparts/charts/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}

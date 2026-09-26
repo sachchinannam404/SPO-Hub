@@ -1,0 +1,146 @@
+.timelineRoot {
+  width: 100%;
+  padding: 8px 0;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 8px;
+  position: relative;
+}
+
+.timelineItem {
+  position: relative;
+  display: flex;
+  padding-bottom: 28px;
+  min-height: 80px;
+}
+
+.marker {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #0078d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  color: #0078d4;
+  font-size: 16px;
+}
+
+.line {
+  position: absolute;
+  left: 17px;
+  top: 36px;
+  bottom: 0;
+  width: 2px;
+  background: #c8c6c4;
+}
+
+.content {
+  margin-left: 16px;
+  flex: 1;
+  padding-bottom: 4px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.date {
+  font-size: 12px;
+  color: #605e5c;
+  font-weight: 600;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #f3f2f1;
+  color: #323130;
+}
+
+.category {
+  font-size: 12px;
+  color: #0078d4;
+}
+
+.itemTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #323130;
+  margin: 0 0 4px;
+}
+
+.description {
+  font-size: 13px;
+  color: #605e5c;
+  line-height: 1.45;
+  margin-bottom: 6px;
+}
+
+.footer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.owner {
+  color: #605e5c;
+}
+
+.statusCompleted {
+  border-color: #107c10 !important;
+  color: #107c10 !important;
+  background: #dff6dd !important;
+}
+
+.statusInProgress {
+  border-color: #0078d4 !important;
+  color: #0078d4 !important;
+  background: #deecf9 !important;
+}
+
+.statusUpcoming {
+  border-color: #8a8886 !important;
+  color: #605e5c !important;
+}
+
+.statusOnHold {
+  border-color: #ffaa44 !important;
+  color: #8a5100 !important;
+  background: #fff4ce !important;
+}
+
+.statusCancelled {
+  border-color: #a4262c !important;
+  color: #a4262c !important;
+  background: #fde7e9 !important;
+}
+
+.compact {
+  .timelineItem {
+    padding-bottom: 16px;
+    min-height: 56px;
+  }
+
+  .marker {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .line {
+    left: 13px;
+    top: 28px;
+  }
+}

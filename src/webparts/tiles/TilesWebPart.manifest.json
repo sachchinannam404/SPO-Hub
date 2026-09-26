@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "c1d2e3f4-a5b6-7890-cdef-1234567890ab",
+  "alias": "TilesWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46db-9951-df6df2897b84",
+      "group": { "default": "SPO-Hub" },
+      "title": { "default": "List-Based Tiles" },
+      "description": {
+        "default": "Configurable SharePoint list-driven tiles for application launchers, quick links, automation catalogs and adoption campaigns."
+      },
+      "officeFabricIconFontName": "AppIconDefault",
+      "properties": {
+        "dataSource": {
+          "itemLimit": 50,
+          "orderDirection": "asc",
+          "fieldMapping": {
+            "titleField": "Title",
+            "descriptionField": "Description",
+            "imageField": "Image",
+            "linkField": "Link",
+            "categoryField": "Category",
+            "orderField": "DisplayOrder",
+            "isActiveField": "IsActive"
+          }
+        },
+        "display": {
+          "layout": "grid",
+          "columns": 4,
+          "cardSize": "medium",
+          "showDescription": true,
+          "showCategory": true
+        },
+        "behavior": {
+          "enableSearch": true,
+          "enableFilter": true,
+          "openLinksInNewTab": true
+        },
+        "personalization": {
+          "enableAudienceTargeting": false
+        }
+      }
+    }
+  ]
+}

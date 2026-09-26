@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+*.log
+npm-debug.log*
+
+# Build
+lib/
+dist/
+temp/
+release/
+*.sppkg
+sharepoint/solution/*.sppkg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# SPFx
+*.tsbuildinfo
+.heft/
+config/write-manifests.json
+
+# Environment
+.env
+.env.local

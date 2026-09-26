@@ -1,0 +1,58 @@
+.root {
+  width: 100%;
+}
+
+.sectionTitle {
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  position: relative;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #edebe9;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.15s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.featuredBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #deecf9;
+  color: #0078d4;
+}
+
+.achievement {
+  font-size: 14px;
+  font-weight: 600;
+  color: #323130;
+  line-height: 1.4;
+}
+
+.bio {
+  font-size: 13px;
+  color: #605e5c;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

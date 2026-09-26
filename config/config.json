@@ -49,25 +49,11 @@
           "manifest": "./src/webparts/timeline/TimelineWebPart.manifest.json"
         }
       ]
-    },
-    "charts-web-part": {
-      "components": [
-        {
-          "entrypoint": "./lib/webparts/charts/ChartsWebPart.js",
-          "manifest": "./src/webparts/charts/ChartsWebPart.manifest.json"
-        }
-      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "TilesWebPartStrings": "lib/webparts/tiles/loc/{locale}.js",
-    "AccordionWebPartStrings": "lib/webparts/accordion/loc/{locale}.js",
-    "QuotesWebPartStrings": "lib/webparts/quotes/loc/{locale}.js",
-    "EmployeeSpotlightWebPartStrings": "lib/webparts/employeeSpotlight/loc/{locale}.js",
-    "QuestionsAnswersWebPartStrings": "lib/webparts/questionsAnswers/loc/{locale}.js",
-    "TimelineWebPartStrings": "lib/webparts/timeline/loc/{locale}.js",
-    "ChartsWebPartStrings": "lib/webparts/charts/loc/{locale}.js",
     "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
     "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
   }

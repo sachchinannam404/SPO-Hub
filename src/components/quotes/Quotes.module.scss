@@ -1,0 +1,44 @@
+.quotesRoot {
+  width: 100%;
+}
+
+.sectionTitle {
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.quoteCard {
+  margin: 0;
+  padding: 28px 32px;
+  background: #faf9f8;
+  border-left: 4px solid #0078d4;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.quoteText {
+  font-size: 18px;
+  line-height: 1.55;
+  color: #323130;
+  font-style: italic;
+  margin: 0 0 20px;
+}
+
+.authorRow {
+  display: flex;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.counter {
+  color: #605e5c;
+  min-width: 48px;
+  text-align: center;
+}

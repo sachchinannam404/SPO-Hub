@@ -1,43 +1,16 @@
 # Architecture Decision Log
 
-## ADR-001: Single List Data Adapter
+## ADR-008: Admin Forms incorporated from AdminForms repo
 
-**Decision:** All web parts use `SharePointListDataService` + `useListData` hook.  
-**Rationale:** Spec requires no duplicated SharePoint connection, filtering, sorting, or error handling.  
-**Consequence:** New renderers only implement mapping + presentation.
+**Decision:** Integrate https://github.com/sachchinannam404/AdminForms as a first-class SPO-Hub web part under `src/adminForms/` + `src/webparts/adminForms/`.
 
-## ADR-002: PnPjs over raw REST
+**Rationale:** Delivers Request Center, My Requests, Approval Center, multi-type forms, audit, reporting, and Power Automate notifications required by Phase 4 without rewriting a proven suite.
 
-**Decision:** Use `@pnp/sp` with SPFx context.  
-**Rationale:** Consistent, typed, maintained abstraction; matches enterprise guidance.  
-**Consequence:** One dependency; easier expand/select handling.
+**Integration approach:**
+- Source under `src/adminForms/` (models, services, components, config registry)
+- Web part: `AdminFormsWebPart` in the SPO-Hub package (group SPO-Hub)
+- Power Automate webhook via property pane
+- Optional list/group provisioning on load
+- Does not replace the generic List Data Adapter used by Tiles/Accordion/etc.
 
-## ADR-003: Client-side audience filtering (with server top)
-
-**Decision:** Apply audience filter after retrieving a bounded set of items.  
-**Rationale:** Multi-choice audience OData is limited; early top + client filter is practical.  
-**Consequence:** Do not retrieve unbounded datasets; keep `itemLimit` reasonable.
-
-## ADR-004: No secrets in web part properties
-
-**Decision:** Power Automate integration uses only a configured HTTPS flow URL.  
-**Rationale:** Spec security requirements; secrets must not live in the property bag.  
-**Consequence:** Flows should use Azure AD or restricted HTTP triggers.
-
-## ADR-005: Fluent UI React 8
-
-**Decision:** Use `@fluentui/react` v8 (compatible with SPFx 1.20).  
-**Rationale:** Stable, accessible, already present in SPFx toolchain.  
-**Consequence:** Avoid Fluent v9 until SPFx fully supports it in the chosen baseline.
-
-## ADR-006: Timeline is a first-class renderer
-
-**Decision:** Implement Vertical Timeline independently (not derived from Q&A sample).  
-**Rationale:** Explicit instruction in the specification.  
-**Consequence:** Own data contract, status model, and presentation.
-
-## ADR-007: Incremental delivery
-
-**Decision:** Ship Phase 1 foundation + Tiles + Timeline + Accordion renderer first.  
-**Rationale:** Spec implementation order; value early, reduce risk.  
-**Consequence:** Remaining renderers (Quotes, Spotlight, Q&A, Charts) follow the same patterns.
+**Consequence:** SPO-Hub ships list-driven content renderers and a full office-admin request suite in one package.

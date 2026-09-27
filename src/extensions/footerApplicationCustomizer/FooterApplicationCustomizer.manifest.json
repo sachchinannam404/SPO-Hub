@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-extension-manifest.schema.json",
+  "id": "e9f0a1b2-c3d4-5678-ef01-901234567c34",
+  "alias": "FooterApplicationCustomizer",
+  "componentType": "Extension",
+  "extensionType": "ApplicationCustomizer",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "preconfiguredEntries": [
+    {
+      "title": { "default": "SPO-Hub Site Footer" },
+      "description": {
+        "default": "Enterprise site footer with list-driven links, copyright, and branding. Deployed via Application Customizer (Bottom placeholder)."
+      },
+      "officeFabricIconFontName": "Footer",
+      "properties": {
+        "listTitle": "Footer Links",
+        "copyrightText": "\u00a9 Contoso. All rights reserved.",
+        "showCopyright": true,
+        "backgroundColor": "",
+        "textColor": "",
+        "enableListLinks": true,
+        "maxLinks": 12,
+        "layout": "columns"
+      }
+    }
+  ]
+}

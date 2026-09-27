@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+      Title="SPO-Hub Site Footer"
+      Location="ClientSideExtension.ApplicationCustomizer"
+      ClientSideComponentId="e9f0a1b2-c3d4-5678-ef01-901234567c34"
+      ClientSideComponentProperties="{&quot;listTitle&quot;:&quot;Footer Links&quot;,&quot;copyrightText&quot;:&quot;\u00a9 Contoso. All rights reserved.&quot;,&quot;showCopyright&quot;:true,&quot;enableListLinks&quot;:true,&quot;maxLinks&quot;:12,&quot;layout&quot;:&quot;columns&quot;}"
+      HostProperties="{&quot;preAllocatedApplicationCustomizerBottomHeight&quot;:&quot;120&quot;}">
+  </CustomAction>
+</Elements>
